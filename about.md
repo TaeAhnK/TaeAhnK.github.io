@@ -12,6 +12,6 @@ sidebar_link: true
   Notes taken studying Computer Science & Engineering
 </p>
 
-<p class=message>
+<p class="message">
   E-mail: tenny0124@naver.com
 </p>
