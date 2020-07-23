@@ -1,0 +1,13 @@
+I"<h2 id="시작하기">시작하기</h2>
+<p>| Command                                  | 설명 |
+| ——-                                  | ———————————–              |
+| git init                                 | 디렉토리를 git에 사용하도록 Repository 생성              |
+| git config user.name “<strong>사용자 이름</strong>”      | 작성자 이름 설정                                     |
+| git config email.name “<strong>이메일</strong>”         | 작성자 이메일 설정                                   |
+| git remote add origin <strong>Github 주소</strong>     | Github 주소를 Remote Repository로 설정              |
+| git help <strong>명령어</strong>                        | 관련 명령어 설명 출력                                |
+| git status                               | git의 상태 출력                                    |
+| git config alias.<strong>새로운이름</strong> <strong>커맨드</strong>    | 커맨드 단축어 생성                                   |
+| git push –set-upstream origin master    | Local Repository를 처음으로 Remote Repository로 보냄 |
+| git config –global core.quotepath false | 한글 출력 오류 해결                                  |</p>
+:ET
