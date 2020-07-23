@@ -1,6 +1,4 @@
-I"7<h1 id="급할-때-보기-위한-unix-commands">급할 때 보기 위한 Unix Commands</h1>
-
-<h2 id="경로">경로</h2>
+I"�<h2 id="경로">경로</h2>
 
 <table>
   <thead>
@@ -163,7 +161,7 @@
 
 <h2 id="vim">Vim</h2>
 <h4 id="모드-이동">모드 이동</h4>
-<p><img src="\assets\images\2020_07_04_Unix_Command_Guide_01.png" alt="Image1" /></p>
+<p><img src="\assets\images\2020-07-04-Unix_Command-Guide-01.png" alt="Image1" /></p>
 
 <table>
   <thead>
@@ -263,12 +261,31 @@
 
 <h4 id="비주얼-모드">비주얼 모드</h4>
 
-<p>|Command|설명|
-|——|——|
-|v, V|블록 지정|
-|y|복사|
-|p|붙여넣기|</p>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>v, V</td>
+      <td>블록 지정</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>복사</td>
+    </tr>
+    <tr>
+      <td>p</td>
+      <td>붙여넣기</td>
+    </tr>
+  </tbody>
+</table>
+
 <h4 id="명령-모드">명령 모드</h4>
+
 <p>|Command|설명|
 |——|——|
 |:wq|저장|
