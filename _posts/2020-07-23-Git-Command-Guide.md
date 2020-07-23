@@ -3,7 +3,7 @@ layout: post
 title:  "급할 때 보기 위한 Git Commands"
 date:   2020-07-23 19:30:00 +0900
 categories:
-  - etc
+  - ETCs
 tags: 
   - github
   - git
