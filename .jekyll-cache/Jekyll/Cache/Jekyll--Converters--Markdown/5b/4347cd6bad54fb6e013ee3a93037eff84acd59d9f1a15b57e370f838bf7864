@@ -1,4 +1,4 @@
-I"�<h2 id="경로">경로</h2>
+I"�<h2 id="경로">경로</h2>
 
 <table>
   <thead>
@@ -286,11 +286,32 @@
 
 <h4 id="명령-모드">명령 모드</h4>
 
-<p>|Command|설명|
-|——|——|
-|:wq|저장|
-|:q!|저장 없이 나가기|
-|:s/<strong>바뀔 단어</strong>/<strong>바꿀 단어</strong>/|텍스트 바꾸기|
-|:%s/<strong>바뀔 단어</strong>/<strong>바꿀 단어</strong>/g|텍스트 바꾸기|
-***</p>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:wq</td>
+      <td>저장</td>
+    </tr>
+    <tr>
+      <td>:q!</td>
+      <td>저장 없이 나가기</td>
+    </tr>
+    <tr>
+      <td>:s/<strong>바뀔 단어</strong>/<strong>바꿀 단어</strong>/</td>
+      <td>텍스트 바꾸기</td>
+    </tr>
+    <tr>
+      <td>:%s/<strong>바뀔 단어</strong>/<strong>바꿀 단어</strong>/g</td>
+      <td>텍스트 바꾸기</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
 :ET

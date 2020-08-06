@@ -21,7 +21,7 @@
 
 h2.post-title,
 h2.page-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .post-tags a {
@@ -79,6 +79,7 @@ article + *,
   color: $body-muted;
   margin-bottom: 1rem;
   margin-top: -0.5rem;
+  font-size: 90%
 }
 
 .post,
@@ -90,4 +91,13 @@ article + *,
 
 button.disqus-load {
   margin-top: 1em;
+}
+
+.related h2 {
+  font-size: 120%;
+}
+
+.related .posts-list h3 {
+  font-size: 100%;
+  font-weight: normal;
 }
