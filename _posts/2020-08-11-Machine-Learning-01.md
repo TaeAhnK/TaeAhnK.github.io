@@ -67,17 +67,17 @@ Coursera > Machine Learning (Andrew Ng) > Week 1
 <br>
 
 #### 지도 학습을 통해 해결할 수 있는 문제
-- 재귀 (Regression Problem)
+- 회귀 (Regression Problem)
 - 분류 (Classification Problem)  
 
-### 재귀 (Regression)
- &nbsp;&nbsp;&nbsp;&nbsp; 알고리즘을 통해 연속된 값을 가진 결과를 예측하는 문제를 "재귀"라고 한다. 입력값을 연속 함수에 매칭시키면 함수를 통해 입력에 따른 연속된 출력을 구할 수 있다.  
+### 회귀 (Regression)
+ &nbsp;&nbsp;&nbsp;&nbsp; 알고리즘을 통해 연속된 값을 가진 결과를 예측하는 문제를 "회귀"라고 한다. 입력값을 연속 함수에 매칭시키면 함수를 통해 입력에 따른 연속된 출력을 구할 수 있다.  
 <br>
 
 <center><img src="\assets\images\2020-08-11-Machine-Learning-01-01.PNG" width="300px" height="300px" align=center>
 </center>
 
->위에서 사용한 집값의 예시가 재귀이다. 집의 가격은 집마다 모두 다른 연속적인 값이다. 평수를 $x$, 가격을 $y$라고 했을 때 $x$에 대한 $y$의 대략적인 연속 함수를 구할 수 있고, 이 함수를 통해 입력에 따라 다른 집의 가격을 예측할 수 있다.  
+>위에서 사용한 집값의 예시가 회귀이다. 집의 가격은 집마다 모두 다른 연속적인 값이다. 평수를 $x$, 가격을 $y$라고 했을 때 $x$에 대한 $y$의 대략적인 연속 함수를 구할 수 있고, 이 함수를 통해 입력에 따라 다른 집의 가격을 예측할 수 있다.  
 
 <br>
 
