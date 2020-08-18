@@ -3,13 +3,14 @@ layout: post
 title:  "급할 때 보기 위한 Matlab"
 date:   2020-08-18 12:30:00 +0900
 categories:
-  - etc
+  - ETCs
 tags: 
   - matlab
   - machine learning
 use_math: false
 ---
-
+<br>
+<br>
 
 ## 기본 Commands
 	>> % 주석
