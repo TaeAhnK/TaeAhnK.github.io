@@ -1,0 +1,521 @@
+I"m/<h2 id="기본-commands">기본 Commands</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; % 주석
+
+&gt;&gt; help		% help cmd 	cmd에 관한 도움말 출력
+</code></pre></div></div>
+
+<h4 id="파일-불러오기저장하기">파일 불러오기/저장하기</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; pwd		% 현재 위치
+
+&gt;&gt; cmd 		% 디렉토리 변경
+
+&gt;&gt; ls		% 현재 디렉토리의 파일 출력
+
+&gt;&gt; load file.dat  	% 파일 불러오기
+
+&gt;&gt; load('file.dat') % 파일 불러오기
+
+&gt;&gt; who 		% 작업 공간의 변수 출력
+
+&gt;&gt; whos 	% 작업 공간의 변수 자세히 출력
+
+&gt;&gt; clear A 	% 작업 공간의 변수 A 삭제
+
+&gt;&gt; clear 	% 작업 공간의 모든 변수 삭제
+
+&gt;&gt; save hello.mat v; 	% v를 hello.mat으로 저장
+
+&gt;&gt; addpath('C:\User\dic1\dic2')	% 매트랩에 경로 추가
+</code></pre></div></div>
+
+<h4 id="출력">출력</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; a = 3;
+&gt;&gt; a
+a = 3
+
+&gt;&gt; disp(sprintf('2 decimals: %0.2f', a))  % disp, sprintf를 이용한 C 스타일 출력
+2 decimals: 3.00
+
+&gt;&gt; format long		% 출력을 long 형식으로
+&gt;&gt; pi
+ans = 3.141592653589793
+
+&gt;&gt; format short 	% 출력을 short 형식으로
+&gt;&gt; pi
+ans = 3.1416
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="연산">연산</h2>
+<h4 id="기본-연산">기본 연산</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; 1 + 2
+ans = 
+	3
+
+&gt;&gt; 1 - 2
+ans =
+	-1
+
+&gt;&gt; 1 * 2
+ans =
+	2
+
+&gt;&gt; 1 / 2
+ans =
+	0.5000
+
+&gt;&gt; 2^3
+ans =
+	8
+
+&gt;&gt; sqrt(4)
+ans =
+	2
+
+&gt;&gt; log(3)
+ans =
+    1.0986
+
+&gt;&gt; exp(v)	% 지수 함수
+ans =
+   		20.0855
+</code></pre></div></div>
+
+   	» abs(-3)	% 절댓값
+   	ans = 
+   		3
+
+<h4 id="논리-연산">논리 연산</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; 1 == 2	% false
+ans = 
+	logical
+	0
+
+&gt;&gt; 1 == 1	% true
+ans = 
+	logical
+	1
+
+&gt;&gt; 1 &amp;&amp; 0	% AND
+ans = 
+	logical
+	0
+
+&gt;&gt; 1 || 0	% OR
+ans = 
+	logical
+	1
+
+&gt;&gt; xor(1,0)	% XOR
+ans =
+  		logical
+   		1
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="변수">변수</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; a = 3		% double형
+a = 3
+
+&gt;&gt; a = 3;		% ;를 붙이면 결과가 출력되지 않음
+
+&gt;&gt; b = 'hi'		% char형
+b = 'hi' %
+
+&gt;&gt; c = (3&gt;1)	% logical형
+c =
+	logical
+	1
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="행렬과-벡터">행렬과 벡터</h2>
+<h4 id="생성">생성</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; A = [1 2; 3 4; 5 6]
+A = 
+	1	2
+	3	4
+	5	6
+
+&gt;&gt; v = 1:0.1:2		% a:b:c 	a부터 b씩 c까지
+v = 
+	1 ~ 5번 열
+	1.0000    1.1000    1.2000    1.3000    1.4000
+	6 ~ 10번 열
+	1.5000    1.6000    1.7000    1.8000    1.9000
+	11번 열
+	2.0000
+
+&gt;&gt; ones(2,3)		% ones(a,b) 	원소가 1인 a*b 행렬
+ans = 
+	1	1	1
+	1	1	1
+
+&gt;&gt; zeros(1,3)		% zeros(a,b) 	원소가 0인 a*b 행렬
+ans = 
+	0	0	0
+
+&gt;&gt; rand(3,3)		% rand(a,b) 원소가 랜덤인 a*b 행렬
+ans = 
+	0.9575    0.9706    0.8003
+	0.9649    0.9572    0.1419
+	0.1576    0.4854    0.4218
+
+&gt;&gt; randn(1,3)	% randn(a,b) 원소가 정규분포에서 추출된 랜덤값인 a*b 행렬
+ans =
+	1.4897    1.4090    1.4172    
+
+&gt;&gt; eye(4)			% eye(n) 	n*n의 단위 행렬
+ans = 
+	1     0     0     0
+	0     1     0     0
+	0     0     1     0
+	0     0     0     1
+
+&gt;&gt; magic(3) 	% magic(n) 	n*n인 마방진 행렬 생성
+ans =
+    8	1	6
+    3	5	7
+    4	9	2
+</code></pre></div></div>
+
+<h4 id="분석">분석</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; A = [1 2; 3 4; 5 6];
+   	&gt;&gt; v = [1; 2; 3];
+
+
+&gt;&gt; size(A)			% 행렬의 크기
+ans =
+	3	2
+
+&gt;&gt; length(v)		% 벡터의 길이
+ans = 
+	11
+
+&gt;&gt; A(3,2)		% 변수명(a,b) 	변수의 (a,b)값 출력
+ans = 
+	6
+
+&gt;&gt; A(2,:)		% 변수명(a,:) 	변수의 a행 값 출력
+ans = 
+	3	4
+
+&gt;&gt; A(:,2) 		% 변수명(:,b) 	변수의 b열 값 출력
+ans = 
+	2
+	4
+	6
+
+&gt;&gt; A([1 3], :)	% 변수명([a b], :)  변수의 a, b행의 값 출력
+ans = 
+	1     2
+	5     6
+
+&gt;&gt; max(v) 		% v의 최댓값
+ans =
+	3
+
+&gt;&gt; [val, ind] = max(v)	% v의 최댓값과 그 인덱스
+val =
+	3
+ind =
+	3
+
+&gt;&gt; max(A, [], 1)	 % 열의 원소 중 최댓값
+ans =
+   		5	6
+
+&gt;&gt; max(A, [], 2)	 % 행의 원소 중 최댓값
+ans =
+	2
+	4
+	6
+
+&gt;&gt; A &lt; 3 		% A의 원소 중 3보다 작으면 참, 아니면 거짓
+ans =
+	3×2 logical 배열
+	1	1
+	0	0
+	0	0
+
+&gt;&gt; [r, c] = find(A&gt;3) 	% A보다 큰 값의 행, 열 좌표
+r =
+    3
+    2
+    3
+c =
+    1
+    2
+    2
+
+
+&gt;&gt; v = [1.000 2.400 3.500];
+
+
+&gt;&gt; sum(v) 	% 원소의 합
+ans =
+	6.9000
+
+&gt;&gt; prod(v)	% 원소의 곱
+ans =
+	8.4000
+
+&gt;&gt; floor(v) % 원소의 끝자리를 버림
+ans = 
+	1	2	3
+
+&gt;&gt; ceil(v) 	% 원소의 끝자리를 올림
+ans =
+	1	3	4
+</code></pre></div></div>
+
+<h4 id="조작">조작</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; A(:,2) = [10; 11; 12]	% 덮어쓰기
+A =
+	1    10
+	3    11
+	5    12
+
+&gt;&gt; A = [A, [100; 101; 102]]	% 붙이기
+A =
+	1    10   100
+	3    11   101
+	5    12   102
+
+&gt;&gt; A(:)			% 모든 원소를 하나의 벡터로
+ans =
+	1
+	3
+	5
+	10
+	11
+	12
+   		100
+   		101
+   		102
+</code></pre></div></div>
+
+   	» A = [1 2; 3 4; 5 6];
+   	» B = [11 12; 13 14; 15 16];
+   	» C = [A B] 	% A와 B를 붙여 C로 저장
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C =
+	1     2    11    12
+	3     4    13    14
+	5     6    15    16
+
+&gt;&gt; C = [A; B]	% A와 B를 세로로 붙여 C로 저장
+C =
+	1     2
+	3     4
+	5     6
+	11    12
+	13    14
+	15    16
+</code></pre></div></div>
+
+<h4 id="연산-1">연산</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; A = [1 2; 3 4; 5 6];
+   	&gt;&gt; B = [11 12; 13 14; 15 16];
+   	&gt;&gt; C = [1 1; 2 2];
+   	&gt;&gt; v = [1; 2; 3];
+
+&gt;&gt; A*C 	 % 행렬의 곱셈
+ans = 
+	5     5
+	11    11
+	17    17
+
+&gt;&gt; A .* B 	% .은 원소 단위 연산
+ans =
+	11    24
+	39    56
+	75    96
+
+&gt;&gt; 1./ A
+ans =
+    1.0000    0.5000
+	0.3333    0.2500
+	0.2000    0.1667
+
+&gt;&gt; -v 		% -를 붙여 *-1
+ans =
+	-1
+	-2
+	-3
+
+&gt;&gt; A' 		% A의 전치행렬
+ans =
+    1	3	5
+    2	4	6
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="그래프">그래프</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; t = [0:0.01:0.98];
+&gt;&gt; y1 = sin(2*pi*4*t);
+&gt;&gt; y2 = cos(2*pi*4*t);
+&gt;&gt; A = [1 2; 3 4; 5 1];
+
+
+&gt;&gt; plot(t, y1);		% (t, y1)의 그래프 출력
+</code></pre></div></div>
+<center><img src="\assets\images\2020-08-18-Matlab-Command-Guide-01.jpg" width="300px" height="300px" align="center" />
+</center>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; hold on; 	% 기존 그래프 위에 다음 그래프 출력
+
+&gt;&gt; plot(t, y2);
+</code></pre></div></div>
+<center><img src="\assets\images\2020-08-18-Matlab-Command-Guide-02.jpg" width="300px" height="300px" align="center" />
+</center>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; xlabel('time'); 	% x축 이름 추가
+
+&gt;&gt; ylabel('value');	% y축 이름 추가
+
+&gt;&gt; legend('sin', 'cos'); 	% 그래프에 이름 추가
+
+&gt;&gt; axis([0.5 1 -1 1]); 	% 축 범위 설정
+</code></pre></div></div>
+
+<center><img src="\assets\images\2020-08-18-Matlab-Command-Guide-03.jpg" width="300px" height="300px" align="center" />
+</center>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; print -dpng 'myPlot';	% png으로 그래프 저장
+
+&gt;&gt; figure(1); plot(t, y1);	% plot을 figure 1로 새 창에서 열기
+&gt;&gt; figure(2); plot(t, y2);	% plot을 figure 2로 새 창에서 열기
+
+&gt;&gt; subplot(1,2,1); % subplot(a,b,c) 화면을 a*b로 분할하고 c부터 그래프 출력
+&gt;&gt; plot(t, y1);
+&gt;&gt; subplot(1,2,2);
+&gt;&gt; plot(t, y2);
+</code></pre></div></div>
+<center><img src="\assets\images\2020-08-18-Matlab-Command-Guide-04.jpg" width="300px" height="300px" align="center" />
+</center>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; imagesc(A);		% 좌표평면을 행렬에 맞게 색칠
+</code></pre></div></div>
+<center><img src="\assets\images\2020-08-18-Matlab-Command-Guide-05.jpg" width="300px" height="300px" align="center" />
+</center>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; colorbar;		% Color Bar 출력
+&gt;&gt; colormap gray;	% 색을 회색 계열로 변경
+</code></pre></div></div>
+<center><img src="\assets\images\2020-08-18-Matlab-Command-Guide-06.jpg" width="300px" height="300px" align="center" />
+</center>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; hist(y1, 50); 	% hist(t, n)	v를 히스토그램으로 출력 (기둥 n개)
+</code></pre></div></div>
+<center><img src="\assets\images\2020-08-18-Matlab-Command-Guide-07.jpg" width="300px" height="300px" align="center" />
+</center>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; close; 			% 닫기
+&gt;&gt; clf; 			% 화면 지우기
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="조건문-반복문">조건문, 반복문</h2>
+<h4 id="for문">for문</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; v = zeros(10,1);
+
+&gt;&gt; for i=1:10,
+      v(i) = 2^i;
+   end;
+&gt;&gt; v
+v =
+	2
+	4
+	8
+	16
+	32
+	64
+	128
+	256
+	512
+	1024
+</code></pre></div></div>
+
+<h4 id="whlie문">whlie문</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; i = 1;			% while문 
+&gt;&gt; while(i &lt;= 5),
+      v(i) = 100;
+      i = i+1;
+   end;
+&gt;&gt; v
+v = 
+	100
+	100
+	100
+	100
+	100
+	64
+	128
+	256
+	512
+	1024
+</code></pre></div></div>
+
+<h4 id="break-if문">break, if문</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; i = 1;			
+&gt;&gt; while true,
+      v(i) = 999;
+      i = i+1;
+      if i== 6,
+         break;		
+      end;
+   end;
+&gt;&gt; v
+v = 
+	999
+	999
+	999
+	999
+	999
+	64
+	128
+	256
+	512
+	1024
+</code></pre></div></div>
+
+<h4 id="if-elseif-else문">if, elseif, else문</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; v(1) = 2;		% if, elseif, else
+&gt;&gt; if v(1)==1,
+      disp('Value : 1');
+   elseif v(1)==2,
+      disp('Value : 2');
+   else,
+      disp('Value : 3+');
+   end;
+
+Value : 2
+</code></pre></div></div>
+
+<h2 id="함수">함수</h2>
+<p>Matlab에서 사용자 지정 함수를 사용하기 위해서는 파일로 함수를 작성한 뒤, 저장해서 불러와야 한다. 텍스트 에디터에서 다음과 같이 함수를 작성하고 .m 파일로 저장한다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function [y1, y2] = squareAndCube(x)
+
+y1 = x^2;
+y2 = x^3;
+</code></pre></div></div>
+
+<p>addpath 명령어를 통해 squareAndCube.m 파일이 저장된 경로를 추가하면 Matlab에서 squareAndCube(x)를 사용할 수 있다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; [a, b] = squareAndCube(5)	
+a =
+	25
+b =
+	125 ---
+</code></pre></div></div>
+:ET
