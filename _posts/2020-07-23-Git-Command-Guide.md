@@ -8,8 +8,6 @@ tags:
   - github
   - git
 ---
-<br>
-<br>
 
 ## 시작하기
 

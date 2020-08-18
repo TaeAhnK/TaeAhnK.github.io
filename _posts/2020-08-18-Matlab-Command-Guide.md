@@ -9,8 +9,6 @@ tags:
   - machine learning
 use_math: false
 ---
-<br>
-<br>
 
 ## 기본 Commands
 	>> % 주석

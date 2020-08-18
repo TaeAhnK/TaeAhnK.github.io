@@ -1,0 +1,317 @@
+I"�<h2 id="경로">경로</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pwd</td>
+      <td>현재 경로</td>
+    </tr>
+    <tr>
+      <td>cd <strong>디렉토리</strong></td>
+      <td>디렉토리로 이동</td>
+    </tr>
+    <tr>
+      <td>cd ~</td>
+      <td>홈 디렉토리로 이동</td>
+    </tr>
+    <tr>
+      <td>cd ..</td>
+      <td>상위 디렉토리로 이동</td>
+    </tr>
+    <tr>
+      <td>cd -</td>
+      <td>이전 디렉토리로 이동</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h2 id="디렉토리와-파일">디렉토리와 파일</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ls</td>
+      <td>현재 디렉토리의 파일 출력</td>
+    </tr>
+    <tr>
+      <td>ls -l</td>
+      <td>파일의 상세 정보 보기</td>
+    </tr>
+    <tr>
+      <td>ls -ld <strong>디렉토리</strong></td>
+      <td>디렉토리의 자세한 정보 보기</td>
+    </tr>
+    <tr>
+      <td>mkdir <strong>디렉토리</strong></td>
+      <td>디렉토리 생성</td>
+    </tr>
+    <tr>
+      <td>touch <strong>파일</strong></td>
+      <td>파일 생성</td>
+    </tr>
+    <tr>
+      <td>mv <strong>파일/디렉토리</strong> <strong>디렉토리</strong></td>
+      <td>디렉토리가 있다면 디렉토리로 파일/디렉토리 이동</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>디렉토리가 없다면 파일/디렉토리 이름 변경</td>
+    </tr>
+    <tr>
+      <td>mv -i <strong>파일</strong> <strong>디렉토리</strong></td>
+      <td>덮어쓸 경우 확인 메시지 출력</td>
+    </tr>
+    <tr>
+      <td>cp -i <strong>파일 1</strong> <strong>파일 2</strong></td>
+      <td>파일 1을 파일 2라는 이름으로 복사</td>
+    </tr>
+    <tr>
+      <td>cp -r -i <strong>디렉토리 1</strong> <strong>디렉토리 2</strong></td>
+      <td>디렉토리 1을 디렉토리 2라는 이름으로 복사</td>
+    </tr>
+    <tr>
+      <td>rm <strong>파일명</strong></td>
+      <td>파일 삭제</td>
+    </tr>
+    <tr>
+      <td>rm -r -i<strong>디렉토리</strong></td>
+      <td>디렉토리 삭제</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h2 id="파일">파일</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>cat <strong>파일명</strong></td>
+      <td>파일 내용 출력</td>
+    </tr>
+    <tr>
+      <td>less <strong>파일명</strong></td>
+      <td>파일의 내용 한 페이지씩 출력</td>
+    </tr>
+    <tr>
+      <td>head -n <strong>줄 수</strong> <strong>파일명</strong></td>
+      <td>줄 수 만큼 파일의 앞 부분 출력</td>
+    </tr>
+    <tr>
+      <td>tail -n <strong>줄 수</strong> <strong>파일명</strong></td>
+      <td>줄 수 만큼 파일의 뒷 부분 출력</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h2 id="command">Command</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>man <strong>Command</strong></td>
+      <td>Command에 관한 설명 보기</td>
+    </tr>
+    <tr>
+      <td>history</td>
+      <td>실행한 Command 목록 출력</td>
+    </tr>
+    <tr>
+      <td>!<strong>히스토리 번호</strong></td>
+      <td>해당 Command 실행</td>
+    </tr>
+    <tr>
+      <td>clear</td>
+      <td>터미널 화면 정리</td>
+    </tr>
+    <tr>
+      <td>cal</td>
+      <td>달력 출력</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="vim">Vim</h2>
+<h4 id="모드-이동">모드 이동</h4>
+<p><img src="\assets\images\2020-07-04-Unix_Command-Guide-01.png" alt="Image1" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>vim <strong>파일명</strong></td>
+      <td>파일을 vim으로 열기</td>
+    </tr>
+    <tr>
+      <td>i, a, o</td>
+      <td>일반 모드 -&gt; 입력 모드</td>
+    </tr>
+    <tr>
+      <td>v</td>
+      <td>일반 모드 -&gt; 비주얼 모드</td>
+    </tr>
+    <tr>
+      <td>:, /</td>
+      <td>일반 모드 -&gt; 명령 모드 (/는 텍스트 검색)</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>입력 모드 -&gt; 일반 모드</td>
+    </tr>
+    <tr>
+      <td>esc</td>
+      <td>비주얼 모드 -&gt; 일반 모드</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>명령 모드 -&gt; 일반 모드</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="일반-모드">일반 모드</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>h</td>
+      <td>왼쪽</td>
+    </tr>
+    <tr>
+      <td>j</td>
+      <td>아래쪽</td>
+    </tr>
+    <tr>
+      <td>k</td>
+      <td>위쪽</td>
+    </tr>
+    <tr>
+      <td>l</td>
+      <td>오른쪽</td>
+    </tr>
+    <tr>
+      <td><strong>숫자+방향키</strong></td>
+      <td>숫자만큼 이동</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>줄 맨 처음</td>
+    </tr>
+    <tr>
+      <td>$</td>
+      <td>줄 맨 마지막</td>
+    </tr>
+    <tr>
+      <td>gg</td>
+      <td>파일 맨 처음</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>파일 맨 마지막</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>삭제</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td>작업 취소</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="비주얼-모드">비주얼 모드</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>v, V</td>
+      <td>블록 지정</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>복사</td>
+    </tr>
+    <tr>
+      <td>p</td>
+      <td>붙여넣기</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="명령-모드">명령 모드</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:wq</td>
+      <td>저장</td>
+    </tr>
+    <tr>
+      <td>:q!</td>
+      <td>저장 없이 나가기</td>
+    </tr>
+    <tr>
+      <td>:s/<strong>바뀔 단어</strong>/<strong>바꿀 단어</strong>/</td>
+      <td>텍스트 바꾸기</td>
+    </tr>
+    <tr>
+      <td>:%s/<strong>바뀔 단어</strong>/<strong>바꿀 단어</strong>/g</td>
+      <td>텍스트 바꾸기</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+:ET
