@@ -198,7 +198,8 @@ $$
 
 <br>
 이 글은 Coursera의 Machine Learning (Andrew Ng) 강의 내용을 정리한 것입니다.  
-<https://www.coursera.org/learn/machine-learning/home/welcome>  
+<https://www.coursera.org/learn/machine-learning/home/welcome>
+수식이 길어 모바일 환경에서 잘릴 수 있습니다. 긴 수식은 스크롤을 지원합니다.  
 <br>
 
 
