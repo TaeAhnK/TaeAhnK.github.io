@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[ML] 3. 모델과 비용함수"
+title: "[ML] 3. 회귀와 선형 회귀"
 date: 2020-08-19 15:00:00 +0900
 categories:
   - Machine Learning
@@ -13,9 +13,9 @@ Coursera > Machine Learning (Andrew Ng) > Week 1
 
 ---
 
-# 3. 모델의 표현 (Model Representation)
+# 회귀 (Regression)
 
-&nbsp;&nbsp;&nbsp;&nbsp;학습 예제를 학습 알고리즘에 대입하면 가설 함수 $h (hypothesis)$를 구할 수 있다. $h$에 새로운 데이터 $x$를 대입하여 결과 $y$를 예측할 수 있다. 이 과정을 도식화하면 아래 그림과 같다.
+&nbsp;&nbsp;&nbsp;&nbsp;회귀의 경우, 학습 예제를 학습 알고리즘에 대입하면 가설 함수 $h (hypothesis)$를 구할 수 있다. 가설 함수 $h$의 형태에 따라 선형 회귀와 다항 회귀 등으로 분류할 수 있다. $h$에 새로운 데이터 $x$를 대입하면 결과 $y$를 예측할 수 있다. 이 과정을 도식화하면 아래 그림과 같다.
 
 $$
 \begin{align*}
@@ -31,7 +31,9 @@ $$
 &nbsp; &nbsp; &nbsp; &nbsp; 예를 들어, 평수를 통해 집의 가격을 예측한다고 하자. 먼저 우리는 여태까지 판매된 집의 가격과 평수의 데이터를 살펴볼 것이다. 데이터를 통해 평수와 가격의 관계를 나타내는 적당한 가설 함수를 도출하고, 함수에 예측하고자 하는 평수를 대입해 집의 가격을 예측할 것이다.  
 <br>
 
-## 3.1 표기
+# 1. 선형 회귀
+
+## 1.1 선형 회귀의 표기
 
 &nbsp;&nbsp;&nbsp;&nbsp;다양한 개념을 수식으로 표현하기 위해 아래와 같은 표기를 사용한다.
 
@@ -41,18 +43,18 @@ $y's$ : 출력 변수/특성
 $(x, y)$ : 학습 예제 한 쌍  
 $(x^{(i)}, y^{(i)})$ : $i$번째 학습 예제  
 
-&nbsp;&nbsp;&nbsp;&nbsp;선형 회귀 모델의 함수 $h$는 다음과 같은 일반식을 가진다.
+&nbsp;&nbsp;&nbsp;&nbsp;선형 회귀 모델의 함수 $h$는 직선의 형태로, 다음과 같은 일반식을 가진다.
 
 $$
-h(x) = \theta_0 + \theta_1x + \theta_2x^2+\dots+\theta_nx^n
+h(x) = \theta_0 + \theta_1x\\
 \\
 $$
 
-$h(x)$는 $x$에 관한 식으로, 학습 알고리즘을 통해 $x$의 계수 $\theta$를 구한다.  
+$h(x)$는 $x$에 관한 식으로, 학습 알고리즘을 통해 $\theta$를 구한다.  
 <br>
 
 
-## 3.2 비용함수 (Cost Function)
+## 1.2 비용함수 (Cost Function)
 
 &nbsp;&nbsp;&nbsp;&nbsp; 학습 알고리즘을 통해 도출한 가설 함수 $h$는 비용함수를 통해 정확도를 측정할 수 있다. 가설 함수는 가설 함수의 결과 $h(x)$와 실제 결과 $y$의 차(오차)가 작을수록 정확하다고 할 수 있다. 따라서 다음 식을 통해 정확도를 측정할 수 있다.
 
@@ -120,7 +122,7 @@ $J$가 0에 가까운 진한 파란색일수록 더 정확한 $(\theta_0, \theta
 <br>
 
 
-## 3.3 경사 하강법 (Gradient Descent)
+## 1.3 선형 회귀의 경사 하강법 (Gradient Descent)
 
 경사 하강법은 비용 함수의 최솟값을 구하기 위한 알고리즘이다. 
 
@@ -159,9 +161,6 @@ $\frac{\partial}{\partial\theta_j}J(\theta_0, \theta_1)$는 미분 계수이다.
 <center><img src="\assets\images\2020-08-19-Machine-Learning-02-09.PNG" width="500px" height="500px" align=center>
 </center>
 
-
-
-#### 선형 회귀와 경사 하강법
 
 위에서 선형 회귀 모델의 일반식 $h(x)$와 비용 함수 $J(\theta)$를 설명했다. 비용 함수 $J(\theta)$를 경사 하강법에 대입해 최소화해보자.
 
@@ -206,7 +205,7 @@ $$
 
 <br>
 이 글은 Coursera의 Machine Learning (Andrew Ng) 강의 내용을 정리한 것입니다.  
-<https://www.coursera.org/learn/machine-learning/home/welcome>
+<https://www.coursera.org/learn/machine-learning/home/welcome>  
 수식이 길어 모바일 환경에서 잘릴 수 있습니다. 긴 수식은 스크롤을 지원합니다.  
 <br>
 
