@@ -25,6 +25,7 @@ $$
  &\downarrow \\
  x\;\rightarrow&\;h \rightarrow \; predicted\;y
 \end{align*}
+\\
 $$
 
 &nbsp; &nbsp; &nbsp; &nbsp; 예를 들어, 평수를 통해 집의 가격을 예측한다고 하자. 먼저 우리는 여태까지 판매된 집의 가격과 평수의 데이터를 살펴볼 것이다. 데이터를 통해 평수와 가격의 관계를 나타내는 적당한 가설 함수를 도출하고, 함수에 예측하고자 하는 평수를 대입해 집의 가격을 예측할 것이다.  
@@ -44,6 +45,7 @@ $(x^{(i)}, y^{(i)})$ : $i$번째 학습 예제
 
 $$
 h(x) = \theta_0 + \theta_1x + \theta_2x^2+\dots+\theta_nx^n
+\\
 $$
 
 $h(x)$는 $x$에 관한 식으로, 학습 알고리즘을 통해 $x$의 계수 $\theta$를 구한다.  
@@ -56,6 +58,7 @@ $h(x)$는 $x$에 관한 식으로, 학습 알고리즘을 통해 $x$의 계수 $
 
 $$
 J(\theta_0, \theta_1) = \frac{1}{2m}\displaystyle\sum_{i=1}^{m}(\hat{y_i} - y_i)^2 = \frac{1}{2m}\displaystyle\sum_{i=1}^{m}(h_\theta(x_i) - y_i)^2
+\\
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp; $h(x)$를 $x$에 관한 식의 입장에서 보면 $\theta$를 계수로 가지는 입력 변수 $x$에 대한 식이다. 즉, 함수의 모양을 결정하는 것은 $\theta$이며, 정확도 $J$또한 $\theta$에 의해 결정된다. 따라서, $J(\theta_0, \theta_1)$를 비교하여 가장 오차가 작은 $\theta$를 구할 수 있다.
@@ -76,6 +79,7 @@ J_2 &= \frac{1}{2m}\displaystyle\sum_{i=1}^{m}(h_2(x_i) - y_i)^2 \\ \\
 &= \frac{1}{6}\big\{ (\frac{2}{3}-1)^2 + (\frac{4}{3}-2)^2 + (2-3)^2\big\} \\ \\
 &\approx  \;0.26 \\
 \end{align*}
+\\
 $$
 
 이때, $h_1$의 오차는 0, $h_2$의 오차는 0.26이다. 모든 $\theta$에 대한 $J$의 그래프를 그리면 다음과 같다.
@@ -99,6 +103,7 @@ J_2 &= \frac{1}{2m}\displaystyle\sum_{i=1}^{m}(h_2(x_i) - y_i)^2 \\ \\
 &= \frac{1}{10}\big\{ (\frac{5}{3}-1)^2 + (\frac{7}{3}-2)^2 + (3-1)^2 + (\frac{11}{3}-1)^2 + (\frac{13}{3}-1)^2\big\} \\ \\
 &\approx  \;2.44 \\
 \end{align*}
+\\
 $$
 
 이다. 모든 $\theta_0$, $\theta_1$에 대해 $J(\theta_0, \theta_1)$를 구해 그래프로 나타내면 아래와 같은 3차원 곡면 모양이다.
@@ -132,6 +137,7 @@ $$
 &\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j}J(\theta_0, \theta_1)\\
 (&for\;j=0\;and\;j=1)
 \end{align*}
+\\
 $$
 
 $\alpha$는 학습 속도(Learning Rate)로, 한 번에 얼마만큼 내려가는지를 결정한다.  
@@ -168,6 +174,7 @@ $$
 j = 0 :\;\;\;\;\frac{\partial}{\partial\theta_j}J(\theta) &= \frac{1}{m}\sum_{i=1}^{m}\big(h_\theta(x^{(i)})-y^{(i)}\big)^2 \\
 j = 1 :\;\;\;\;\frac{\partial}{\partial\theta_j}J(\theta) &= \frac{1}{m}\sum_{i=1}^{m}\big(h_\theta(x^{(i)})-y^{(i)}\big)^2 x^{(i)} \\
 \end{align*}
+\\
 $$
 
 이다. 이 식을 경사 하강법에 대입하면,
@@ -179,6 +186,7 @@ $$
 &\theta_1 := \theta_1 - \alpha\frac{1}{m}\sum_{i=1}^{m}\big(h_\theta(x^{(i)})-y^{(i)}\big)^2 \cdot x^{(i)}\\
 \}
 \end{align*}
+\\
 $$
 
 이다.
